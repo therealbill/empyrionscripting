@@ -1,0 +1,20 @@
+{{intervall 3}}
+Targets: "FoodMover"
+{{~set 'NomaxName' 'BSS Heimdahl'}}
+{{~set 'NomaxFoodContainer' 'F Takeaway Food'}}
+{{~set 'SourceFridge' '1 Main Fridge'}}
+{{~set 'Nomax' ''}}
+{{~entitiesbyname @root.Data.NomaxName}}
+{{#each .}} {{~set 'Nomax' .}}
+ {{/each}}
+{{/entitiesbyname}}
+{{@root.Data.Nomax.Name}}
+Main Fridge
+{{#items E.S @root.Data.SourceFridge}}
+{{#test Id in @root.Ids.Food}}
+{{Name}} {{count}}
+{{~move this @root.Data.Nomax @root.Data.NomaxFoodContainer 150}}{{/move}}
+{{Name}} {{count}}
+{{/test}}
+{{/items}}
+{{/intervall}}

@@ -1,0 +1,9 @@
+{{.Name}}
+{{~use E.S.FuelTank}}
+<color=#F11>
+☢ {{bar Content 0 Capacity 10 '▒' '<color=#300>░</color>'}}<size=10><b><color=#FFF>{{~math Content '/' Capacity}}{{~format . '{0,8:P2}'}}{{~/math}}</color></b></size></color>
+{{/use}}
+{{~use E.S.OxygenTank}}
+<color=#11F>
+✇ {{bar  Content 0 Capacity 10 '▒' '<color=#003>░</color>'}}<size=10><b><color=#FFF>{{~math Content '/' Capacity}}{{~format . '{0,8:P2}'}}{{~/math}}</color></b></size></color>
+{{/use}}

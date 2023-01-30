@@ -1,0 +1,26 @@
+<color=#09315C><align=center><size=20><line-height=15>
+<pos=80><color=#6e2305>Food<line-height=1>
+<pos=178><color=#09315C>◗
+<line-height=23>
+<size=100><pos=-100>╭<line-height=-5>
+<pos=-108>╭<line-height=-1>
+<pos=-116>╭<line-height=-28>
+<pos=-80><size=57>▂<line-height=16.5>
+<pos=-160>╭<line-height=3>
+<pos=-154>╭<line-height=30>
+<size=42><pos=-129>▉<line-height=-15>
+<pos=-129>●<line-height=40>
+<size=37><pos=-128.5><color=#00162e>▄<line-height=18>
+<pos=-128.5>▄<line-height=24>
+<pos=-128.5><color=#02092b>▄<line-height=24>
+<pos=-128.5><color=#09315C>▄<line-height=22>
+<pos=-139>●<line-height=-9.5>
+<pos=-59><size=55>◟<line-height=2.5>
+<pos=-64>◟<line-height=-4>
+<pos=-10><size=57>▂<line-height=.5>
+<pos=-85><size=57>▂<line-height=1>
+<pos=113><size=57>▂<line-height=14>
+<pos=178><size=20><color=#09315C>◗<line-height=-157>
+<pos=-70>▂<line-height=30> 
+{{scroll 7 1}}{{items E.S "F Takeaway Food"}}{{~test Id in @root.Ids.Food}}<align=left><pos=130><size=8><color=orange>{{i18n Key}}</color> <color={{#test Count geq 20}}green{{else}}red{{/test}}>{{Count}}</color><line-height=14>{{/test}}
+{{/items}}{{/scroll}}
