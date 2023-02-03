@@ -1,0 +1,20 @@
+{{set "destination" "Salvage In"}}
+{{#entitiesbyname '*' 500}}
+{{#each .}}
+{{#test @root.E.Id neq Id}}
+{{Name}}:
+{{#deconstruct . @root.data.destination}}
+min: {{MinPos}}
+max: {{MaxPos}}
+current X: {{X}}
+current Y: {{Y}}
+current Z: {{Z}}
+TotalBlocks: {{TotalBlocks}}
+CheckedBlocks: {{CheckedBlocks}}
+RemovedBlocks: {{RemovedBlocks}}
+{{else}}
+- {{/deconstruct}}
+
+{{/test}}
+{{/each}}
+{{/entitiesbyname}}

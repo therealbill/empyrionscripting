@@ -1,0 +1,17 @@
+{{intervall 3}}
+{{~set 'SourceContainer' 'Salvage In'}}
+{{~set 'WeaponContainer' 'Weapons'}}
+{{~set 'SmallDeviceContainer' 'Small Devices'}}
+{{~set 'WeaponList' (concat Ids.WeaponHV Ids.WeaponSV Ids.WeaponCV Ids.WeaponBA)}}
+{{~set 'LargeDeviceContainer' 'A1 Devices CV/BA - L2A 320k'}}
+{{~set 'BlockContainer' 'Blocks'}}
+{{~set 'UnsortedContainer' 'Unsorted'}}
+{{~set  'BlockList'(concat Ids.BlockL Ids.BlockS)}}
+{{#items E.S @root.Data.SourceContainer}}
+{{#test Id in @root.Data.WeaponList}}{{~move this @root.E.S @root.Data.WeaponContainer}}{{/move}}{{Name}} {{count}}{{/test}}
+{{#test Id in @root.Data.BlockList}}{{~move this @root.E.S @root.Data.BlockContainer}}{{/move}}{{/test}}
+{{#test Id in @root.Ids.DeviceS}}{{~move this @root.E.S @root.Data.SmallDeviceContainer}}{{/move}}{{Name}} {{count}}{{/test}}
+{{#test Id in @root.Ids.DeviceL}}{{~move this @root.E.S @root.Data.LargeDeviceContainer}}{{/move}}{{Name}} {{count}}{{/test}}
+{{~move this @root.E.S @root.Data.UnsortedContainer}}{{/move}}{{Name}} {{count}}
+{{/items}}
+{{/intervall}}
